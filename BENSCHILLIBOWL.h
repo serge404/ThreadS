@@ -36,7 +36,7 @@ typedef struct Restaurant {
     int max_size;
     int next_order_number;
     int orders_handled;
-	int expected_num_orders;
+		int expected_num_orders;
     pthread_mutex_t mutex;
     pthread_cond_t can_add_orders, can_get_orders;
 } BENSCHILLIBOWL;
