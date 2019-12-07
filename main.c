@@ -1,4 +1,4 @@
-cd#include <stdio.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
 
@@ -36,7 +36,7 @@ void* BENSCHILLIBOWLCustomer(void* tid) {
  * receive an order.
  */
 void* BENSCHILLIBOWLCook(void* tid) {
-    int cook_id = (int)(long) tid;
+  int cook_id = (int)(long) tid;
 	int orders_fulfilled = 0;
 	printf("Cook #%d fulfilled %d orders\n", cook_id, orders_fulfilled);
 	return NULL;
@@ -50,5 +50,7 @@ void* BENSCHILLIBOWLCook(void* tid) {
  *  - close the restaurant.
  */
 int main() {
-    return 0;
+  OpenRestaurant(BENSCHILLIBOWL_SIZE, EXPECTED_NUM_ORDERS);
+  
+  return 0;
 }
